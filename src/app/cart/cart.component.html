@@ -1,0 +1,14 @@
+<h3>Cart</h3>
+
+<a routerLink="/shipping">Shipping Prices</a>
+
+<div *ngIf="items">
+    <div 
+        *ngFor="let item of items"
+        [className]= "' flex gap-2'"
+    >
+        <span>{{ item.name }}</span>
+        <span>{{ item.price | currency }}</span>
+    </div>
+</div>
+<p [class]=" 'text-black'">cart works!</p>

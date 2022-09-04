@@ -1,0 +1,17 @@
+<div *ngIf="product">
+    <div class="w-[80vw] flex gap-4 border-4 m-auto">
+        <div class="w-2/4 border-4 min-h-60"></div>
+        <div class="w-2/4">
+            <section class="flex flex-col w-full gap-2">
+                <header className="font-bold text-xl">{{product.name}}</header>
+                <p>{{product.description}}</p>
+                <button 
+                    class="bg-rose-800 h-16 rounded w-4/5 text-white font-semibold"
+                    (click) = "addToCart(product)"
+                >
+                    Add to Cart
+                </button>
+            </section>
+        </div>
+    </div>
+<div>
